@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Train Time!!!</title>
     <!--bootstrap-->
     <link
@@ -12,54 +12,91 @@
       crossorigin="anonymous"
     />
     <!--my css-->
-    <link type="stylesheet" href="assets/style.css"  />
-</head>
-<body>
+    <link type="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
     <!--container for all info to go in-->
-<div class="container">
-    <!--jumbotron with title and instructions-->
-    <div class="jumbotron text-center">
+    <div class="container">
+      <!--jumbotron with title and instructions-->
+      <div class="jumbotron text-center">
         <h1 class="display-4">Train Time!!!</h1>
         <p class="lead">What is the train schedule??</p>
-        <hr class="my-4">
-        <p>Enter your train's information into the fields below to add it to the table!</p>
+        <hr class="my-4" />
+        <p>
+          Enter your train's information into the fields below to add it to the
+          table!
+        </p>
       </div>
-      <!--form to input new train info into-->
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <!--row and column to refer to later in css for borders and such-->
+      <div class="row">
+        <div class="col-md-12">
+          <!--form to input new train info into-->
+          <form>
+            <!--Name-->
+            <div class="form-group">
+              <label for="train-name">Train Name:</label>
+              <input
+                type="name"
+                class="form-control"
+                id="trainName"
+                placeholder="Train Name Here"
+              />
+            </div>
+            <!--Destination-->
+            <div class="form-group">
+              <label for="train-destination">Destination:</label>
+              <input
+                class="form-control"
+                id="trainDestin"
+                placeholder="Destination Here"
+              />
+            </div>
+            <!--Departure-->
+            <div class="form-group">
+              <label for="first-train-time">First Departure Time:</label>
+              <input
+                class="form-control"
+                id="trainDepart"
+                placeholder="Frist Departure Time(HH:mm, Military Time)"
+              />
+            </div>
+            <!--Frequency-->
+            <div class="form-group">
+              <label for="train-frequency">Frequency</label>
+              <input
+                class="form-control"
+                id="trainFreq"
+                placeholder="Frequency(mins)"
+              />
+            </div>
+            <button type="button" class="btn btn-primary">Enter</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
+      </div>
+    </br>
+    <!--row and column to refer to later in css-->
+      <div class="row">
+        <div class="col-md-12">
+          <!--start of table with table header for train info-->
+          <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Frequency</th>
+              <th scope="col">Next Arrival</th>
+              <th scope="col">Minutes Away</th>
+            </tr>
+          </thead>
+        </table>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Example multiple select</label>
-          <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-      </form>
-    
-    
-    
-    
-</div>
-<script src="assets/app.js"></script>
-</body>
+        
+      </div>
+
+    </div>
+    <!--Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--My JS-->
+    <script src="assets/app.js"></script>
+  </body>
 </html>
